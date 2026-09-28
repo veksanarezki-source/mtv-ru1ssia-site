@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MTV Россия — интернет-телеканал</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <div class="logo-box">MTV</div>
+    <div class="logo-text">РОССИЯ</div>
+  </div>
+  <nav id="main-nav">
+    <button data-page="home" class="current">Главная</button>
+    <button data-page="afisha">Афиша</button>
+    <button data-page="programs">Программы</button>
+    <button data-page="contacts">Контакты</button>
+    <button data-page="admin" class="nav-admin">Администратор</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ГЛАВНАЯ -->
+  <section class="page active" id="page-home">
+    <div class="hero">
+      <div class="hero-badge" id="home-badge"></div>
+      <h1 id="home-title"></h1>
+      <p class="hero-subtitle" id="home-subtitle"></p>
+      <p class="hero-desc" id="home-desc"></p>
+      <div class="hero-stats" id="home-stats"></div>
+      <button class="btn btn-primary" data-goto="programs">Смотреть программы</button>
+    </div>
+  </section>
+
+  <!-- АФИША -->
+  <section class="page" id="page-afisha">
+    <h2 class="page-title">Афиша</h2>
+    <p class="page-sub">События, премьеры и трансляции на канале</p>
+    <div class="cards-grid" id="afisha-list"></div>
+  </section>
+
+  <!-- ПРОГРАММЫ -->
+  <section class="page" id="page-programs">
+    <h2 class="page-title">Программы</h2>
+    <p class="page-sub">Расписание эфира на сегодня</p>
+    <div class="cards-grid single" id="programs-list"></div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section class="page" id="page-contacts">
+    <h2 class="page-title">Контакты</h2>
+    <p class="page-sub">Свяжитесь с нами — мы всегда на связи</p>
+    <div class="cards-grid">
+      <div class="card contact-card">
+        <h3>Телефон</h3>
+        <p id="contact-phone"></p>
+      </div>
+      <div class="card contact-card">
+        <h3>E-mail</h3>
+        <p id="contact-email"></p>
+      </div>
+      <div class="card contact-card">
+        <h3>Адрес</h3>
+        <p id="contact-address"></p>
+      </div>
+      <div class="card contact-card">
+        <h3>Соцсети</h3>
+        <div class="socials">
+          <a id="link-vk" href="#" target="_blank" rel="noopener">VK</a>
+          <a id="link-tg" href="#" target="_blank" rel="noopener">Telegram</a>
+          <a id="link-yt" href="#" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- АДМИНИСТРАТОР -->
+  <section class="page" id="page-admin">
+    <div id="admin-view"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div>© <span id="footer-year"></span> MTV Россия — интернет-телеканал</div>
+  <nav>
+    <button data-page="home">Главная</button>
+    <button data-page="afisha">Афиша</button>
+    <button data-page="programs">Программы</button>
+    <button data-page="contacts">Контакты</button>
+  </nav>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
